@@ -1,12 +1,12 @@
 
 Comparative Analysis of MSA Tools for Uniprot Sequences
 
-I. Project Overview
+##I. Project Overview
 This project demonstrates the development of a modular and automated bioinformatics pipeline written in Python. The goal is to perform Multiple Sequence Alignment (MSA) using industry-standard tools and quantitatively assess the quality of the resulting alignments using key metrics like **Shannon Entropy**.
 
 The pipeline automatically integrates three different alignment methodologies: **MAFFT (Fast and Scalable)**, **Clustal Omega (General Purpose)**, and **T-Coffee (High Accuracy/Consistency)**.
 
-II. Methodology
+##II. Methodology
 * **Input Data:** A set of protein sequences downloaded from Uniprot were used in FASTA format.
 * **Pipeline:** The custom `msa_full_pipeline.py` script was executed using the 'Run All Aligners' option to automate sequential execution and scoring.
 * **Scoring Metrics:**
@@ -14,7 +14,7 @@ II. Methodology
     * **Match Percentage (%):** Measures the prevalence of the most common residue at each column.
     * **Average Shannon Entropy:** A fundamental measure of sequence conservation. **Lower entropy indicates higher conservation** (less variability) across the alignment.
 
-III. Results: Comparative Analysis Summary
+##III. Results: Comparative Analysis Summary
 
 COMPARATIVE ANALYSIS SUMMARY
 ======================================================================
@@ -26,7 +26,7 @@ uniprot_clustal.fasta          |     84.721 |     85.448 |     0.7932 | Clustal 
 ----------------------------------------------------------------------
 
 
-IV. Conclusion and AI/Tech Insight
+##IV. Conclusion and AI/Tech Insight
 The quantitative analysis clearly indicates a significant difference in conservation quality based on the algorithm used.
 
 The **T-Coffee** alignment yielded the most conserved result, demonstrated by the lowest Average Shannon Entropy value of **0.5036**. This is consistent with its methodology, which prioritizes sequence consistency even at the cost of high gap insertion (90.921% Gap). MAFFT and Clustal Omega provided faster, yet less conserved alignments (Entropy approx. 0.79).
